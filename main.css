@@ -1,0 +1,785 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    font-family:'Poppins', sans-serif;
+}
+
+:root{
+    --cor-fundo: #061421;
+    --cor-fonte: #ffffff;
+    --cor-passada: #f44e3f;
+  
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: var(--cor-fundo);
+    color: var(--cor-fonte);
+}
+
+button{
+    cursor: pointer;
+}
+
+
+svg{
+    width: 100%;
+}
+
+.img{
+    width: 100%;
+
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+}
+
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.logo-logo{
+    padding: 0;
+    width: 15%;
+    height: 15%;
+    align-items: center;  
+}
+
+i{
+    color:  var(--cor-fonte);
+}
+
+.header-icons{
+    display: flex;
+    gap: 14px; 
+}
+
+.header-icons:hover{
+    i{
+        animation: translateY 0.8s infinite alternate;
+        color: #f44e3f;
+    }
+}
+
+@keyframes translateY {
+    from{
+        transform: translateY(0) scale(1);
+    }
+
+    to{
+        transform: translateY(-8px) scale(1.1);
+
+    }
+}
+
+.header-button{
+    border: 1px solid var(--cor-fonte);
+    padding: 8px 24px;
+    border-radius: 4px;
+    color: var(--cor-fonte);
+    background-color: transparent;
+    transition: background-color 0s;
+}
+
+.header-button:hover{
+    border: 1px solid var(--cor-passada);
+    background-color: var(--cor-passada);
+
+}
+
+.header-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14px;
+}
+
+@media screen and (max-wdith: 768px){
+    .header-content{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        i{
+            margin-top: 16px;
+            font-size: 34px;
+        }
+    }
+
+
+        .header-logo img{
+        width: 160px;
+        margin-top: 46px;
+    }
+
+    .header-button{
+        display: none;
+    }
+}
+
+.container{
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 8px;
+}
+
+/*
+.button-contact{
+    border: 1px solid var(--cor-fonte);
+    padding: 7px 24px;
+    border-radius: 4px;
+    color: var(--cor-fonte);
+    background-color: transparent;
+    transition: background-color 0s;
+    position: absolute;
+    left: 75.8%;
+    top: 4.5%;
+}
+
+.button-contact:hover{
+    border: 1px solid var(--cor-passada);
+    background-color: var(--cor-passada);
+
+
+}
+*/
+
+@media screen and (max-wdith: 768px){
+    .button-contact:hover{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        i{
+            margin-top: 16px;
+            font-size: 34px;
+        }
+    }
+
+
+        .header-logo img{
+        width: 160px;
+        margin-top: 46px;
+    }
+
+    .header-button{
+        display: none;
+    }
+}
+
+/* bg gome */
+.bg-home{
+    position: relative;
+}
+
+.bg-home::before{
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba( 6, 18, 30, 0.1), #06121e),url("front-view-man-using-smartphone.jpg");
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    opacity: 0.9;
+}
+
+h2{
+    color: var(--cor-passada);
+    text-align: center;
+    margin: 14px 0;
+}
+
+.hero{
+    color: rgb(151, 190, 190);
+    min-height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+
+    h1{
+        text-align: center;
+        line-height: 150%;
+        max-width: 980px;
+        font-size: 48pxS;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .hero{
+        min-height: 60vh;
+
+        h1{
+            font-size: 34px;
+            padding: 0 14px;
+            width: 100%;
+        }
+        h2{
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px){
+    .hero h1{
+        font-size: 24px;
+    }
+    .hero h2{
+        font-size: 12px;
+    }
+}
+
+
+.about{
+    background-color: var(--cor-fundo);
+    overflow: hidden;
+    color: var(--cor-fonte);
+}
+
+.about-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 34px 14px 64px 14px;
+
+    
+}
+
+.about-content{
+    flex: 1;
+}
+
+.about-description{
+    h2{
+        font-size: 38px;
+        margin-bottom: 24px;
+        
+    }
+
+}
+
+.autoteste{
+    width: 950px;
+    position:absolute;
+    left: 15%;
+    top: 100%;
+    transform: translate(-50% -50%);
+    text-align: justify;
+    text-indent: 40px;
+    font-size: 25px;
+}
+
+.autoteste2{
+    width: 950px;
+    position:absolute;
+    left: 15%;
+    top: 129%;
+    transform: translate(-50% -50%);
+    text-align: justify;
+    text-indent: 40px;
+    font-size: 25px;
+}
+
+.autoteste3{
+    width: 950px;
+    position:absolute;
+    left: 15%;
+    top: 159%;
+    transform: translate(-50% -50%);
+    text-align: justify;
+    text-indent: 40px;
+    font-size: 25px;
+}
+
+.autoteste4{
+    width: 950px;
+    position:absolute;
+    left: 15%;
+    top: 184%;
+    transform: translate(-50% -50%);
+    text-align: justify;
+    text-indent: 40px;
+    font-size: 25px;
+}
+
+.autoteste5{
+    width: 950px;
+    position:absolute;
+    left: 15%;
+    top: 220%;
+    transform: translate(-50% -50%);
+    text-align: justify;
+    text-indent: 40px;
+    font-size: 25px;
+}
+
+@media screen and (max-width: 980px){
+    .about-content{
+        flex-direction: column;
+    }
+}
+
+.video{
+    position:absolute;
+    left: 15%;
+    top: 235%;
+}
+
+.UNS{
+    position: absolute;
+    left: 3%;
+    top: 298%;
+    color:wheat;
+}
+
+/*----------card--------*/
+
+
+
+/*inicio do eduardo*/
+
+
+.card{
+    left: 1%;
+    top: 310%;
+    width: 320px;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 8px solid #fff;
+    position: absolute;
+}
+
+.card-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-body{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background: #1f3d4738;
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 2s;
+}
+
+.card:hover .card-body{
+    right: 0;
+}
+
+.card-title{
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 500;
+
+}
+
+.card-sub-title{
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.card-info{
+    font-size: 16px;
+    line-height: 15px;
+    margin: 40px 0;
+    font-weight: 15;
+}
+
+.card-btn{
+    color: #1f3d47;
+    background: #8fabba;
+    padding: 10px 20px;
+    width: 120px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    cursor: pointer;
+    font-weight: bolder
+
+}
+
+/*termino EDUARDO*/
+
+/* inicio milena */
+
+.card2{
+    left: 26%;
+    top: 310%;
+    width: 320px;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 8px solid #fff;
+    position: absolute;
+}
+
+.card-img2{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-body2{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background: #1f3d4738;
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 2s;
+}
+
+.card2:hover .card-body2{
+    right: 0;
+}
+
+.card-title2{
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 500;
+
+}
+
+.card-sub-title2{
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.card-info2{
+    font-size: 14px;
+    line-height: 15px;
+    margin: 10px 0;
+    font-weight: 400;
+}
+
+.card-btn2{
+    color: #1f3d47;
+    background: #8fabba;
+    padding: 10px 20px;
+    width: 120px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    cursor: pointer;
+    font-weight: bolder
+
+}
+
+/* TERMINO MILENA*/
+
+/* INICIO LETICIA */
+
+.card3{
+    left: 51%;
+    top: 310%;
+    width: 320px;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 8px solid #fff;
+    position: absolute;
+}
+
+.card-img3{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-body3{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background: #1f3d4738;
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 2s;
+}
+
+.card3:hover .card-body3{
+    right: 0;
+}
+
+.card-title3{
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 500;
+
+}
+
+.card-sub-title3{
+    text-transform: capitalize;
+    font-size: 1%;
+    font-weight: 300;
+}
+
+.card-info3{
+    font-size: 16px;
+    line-height: 15px;
+    margin: 40px 0;
+    font-weight: 15;
+}
+
+.card-btn3{
+    color: #1f3d47;
+    background: #8fabba;
+    padding: 10px 20px;
+    width: 120px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    cursor: pointer;
+    font-weight: bolder
+
+}
+
+/*termino LETICIA*/
+
+/* inicio THAIS */
+
+.card4{
+    left: 76%;
+    top: 310%;
+    width: 320px;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 8px solid #fff;
+    position: absolute;
+}
+
+.card-img4{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-body4{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background: #1f3d4738;
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 2s;
+}
+
+.card4:hover .card-body4{
+    right: 0;
+}
+
+.card-title4{
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 500;
+
+}
+
+.card-sub-title4{
+    text-transform: capitalize;
+    font-size: 1%;
+    font-weight: 300;
+}
+
+.card-info4{
+    font-size: 16px;
+    line-height: 15px;
+    margin: 40px 0;
+    font-weight: 15;
+}
+
+.card-btn4{
+    color: #1f3d47;
+    background: #8fabba;
+    padding: 10px 20px;
+    width: 120px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    cursor: pointer;
+    font-weight: bolder
+
+}
+
+.Bonecos5{
+    width: 750px;
+    position:absolute;
+    left: 40%;
+    top: 380%;
+    transform: translate(-50% -50%);
+    text-align: justify;
+    text-indent: 40px;
+    font-size: 25px;
+}
+
+.tentativa{
+    position: absolute;
+    left: 2%;
+    top: 380%;
+    max-width: 470px;
+    opacity: 90%;
+    border-radius: 15px;
+    
+}
+
+.hehehehhehe{
+    position: absolute;
+    left: 5%;
+    top: 395%;
+    max-width: 470px;
+    opacity: 90%;
+}
+
+.h3{
+    position: absolute;
+    top: 373%;
+}
+
+/*
+@media screen and (max-width: 921px){
+
+    .geral{
+        flex-direction: column;
+    }
+
+    .autoajuda{
+        flex-direction: column;
+    }
+
+    .autoteste, .autoteste2, .autoteste3, .autoteste4, .autoteste5{
+        width: 350px;
+        left: 5%;
+        font-size: 15px;
+        line-height: 19px;
+    }
+
+    .video0{
+        height: 450px;
+        width: 300px;
+        left: 1px;
+    }
+
+    .card, .card2, .card3, .card4{
+        display: none;
+    }
+
+    .UNS{
+        display: none;
+    }
+
+
+    .header-button, .button-contact{
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 1024px){
+    .autoajuda{
+        flex-direction: column;
+    }
+
+    .autoteste, .autoteste2, .autoteste3, .autoteste4, .autoteste5{
+        width: 700px;
+        left: 5%;
+        font-size: 28px;
+        line-height: 27px;
+    }
+
+    .video{
+        display: none;
+    }
+
+    .card, .card2, .card3, .card4{
+        display: none;
+    }
+
+    .UNS{
+        display: none;
+    }
+
+    
+    .header-button, .button-contact{
+        display: none;
+    }
+/*
+}
+
