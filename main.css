@@ -137,7 +137,7 @@ i{
     padding: 0 8px;
 }
 
-/*
+
 .button-contact{
     border: 1px solid var(--cor-fonte);
     padding: 7px 24px;
@@ -156,7 +156,7 @@ i{
 
 
 }
-*/
+
 
 @media screen and (max-wdith: 768px){
     .button-contact:hover{
