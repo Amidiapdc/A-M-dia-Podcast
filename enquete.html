@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>teste</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+<body>
+ 
+  <h1>Resultados Enquete</h1>  
+  
+  <div class="chartCard">
+
+    <div class="chartBox">
+      <div class="texto"> Qual sua série ?</div>
+        <canvas id="PieChartUm"></canvas>
+    </div>
+
+    <div class="chartBox">
+      <div class="texto"> Qual sua etnia? </div>
+        <canvas id="PieChartDois"></canvas>
+      </div>
+
+      <div class="chartBox">
+        <div class="texto"> Qual a sua orientação sexual ? </div>
+        <canvas id="PieChartTres"></canvas>
+      </div>
+
+      <div class="chartBox">
+        <div class="texto"> Qual rede social você mais utiliza ? </div>
+        <canvas id="PieChartQuatro"></canvas>
+      </div>
+
+      <div class="chartBox">
+        <div class="texto"> Você acredita que a mídia impõe um padrão de beleza às pessoas ?</div>
+        <canvas id="PieChartCinco"></canvas>
+      </div>
+     
+      <div class="chartBox">
+        <div class="texto"> O que te mantém em algum padrão de beleza ? </div>
+        <canvas id="PieChartSeis"></canvas>
+      </div>
+      
+      <div class="chartBox">
+        <div class="texto"> Você gostaria de se desvincular dos padrões apresentados pela mídia ? </div>
+        <canvas id="PieChartSete"></canvas>
+      </div>
+
+
+      <div class="chartBox">
+        <div class="texto">Você Pensa que os padrões de beleza de alguma forma anulam a sua identidade te impedindo de ser como você realmente gostaria ? </div>
+        <canvas id="PieChartOito"></canvas>
+      </div>
+      
+      <div class="chartBox">
+        <div class="texto">Qual tipo de preconceito você já sofreu ?</div>
+        <canvas id="PieChartNove"></canvas>
+      </div>
+
+      <div class="chartBox">
+        <div class="texto">Qual tipo de preconceito você já sofreu ?</div>
+        <canvas id="PieChartDez"></canvas>
+      </div>
+        </div>
+    </div>
+
+
+   
+    
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+    <script>
+    
+  
+    // setup - Primeiro Chart --------------------------------------------------------------------------------------------------------------
+    const data = {
+      labels: ['1º Série', '2º Série', '3º Série'],
+      datasets: [{
+        label: 'Qual sua série',
+        data: [87, 27, 68],
+        borderWidth: 2
+      }]
+    };
+    
+    // config 
+    const config = {
+      type: 'pie',
+      data,
+      options: {
+        aspectRatio: 1,
+            beginAtZero: true
+          }
+    };
+
+    // render init block
+    const PieChartUm = new Chart(
+      document.getElementById('PieChartUm'),
+      config
+    );
+
+    // Segundo Chart------------------------------------------------------------------------------------------------------------
+     // setup 
+    const dataLine = {
+      labels: ['Pardo', 'Negro', 'Branco', 'Amarelo', 'Indígena'],
+      datasets: [{
+        label: 'Qual sua etnia',
+        data: [74, 41, 63, 2, 2],
+        borderWidth: 2
+      }]
+    };
+
+    // config 
+    const configLine = {
+      type: 'pie',
+      data: dataLine,
+      options: { 
+        aspectRatio: 1,
+            beginAtZero: true
+          }
+     
+    };
+
+    // render init block
+    const PieChartDois = new Chart(
+      document.getElementById('PieChartDois'),
+      configLine
+    );
+
+    //Terceiro chart--------------------------------------------------------------------------------------------------------------------
+     // setup 
+    const dataPie = {
+      labels: ['Heterossexual', 'Bissexual', 'Panssexual', 'Homossexual', 'Não-Binário'],
+      datasets: [{
+        label: 'Qual a sua orientação sexual',
+        data: [150, 21, 3, 6, 1],
+  
+        borderWidth: 2
+      }]
+    };
+
+    // config 
+    const configPie = {
+      type: 'pie',
+      data: dataPie,
+     
+      options: {
+        borderWidth: 10,
+        borderRadius: 2,
+        hoverBorderWidth: 0,
+        aspectRatio: 1,
+
+      }
+    };
+
+    // render init block
+    const PieChartTres = new Chart(
+      document.getElementById('PieChartTres'),
+      configPie
+    );
+   
+    // quarto chart--------------------------------------------------------------------------------------------------------------------------
+     // setup 
+     const dataPieChartQuatro = {
+      labels: ['Instagram', 'WhatsApp', 'TikTok', 'YouTube', 'Facebook', 'Twitter'],
+      datasets: [{
+        label: 'Qual rede social você mais utiliza',
+        data: [102, 46, 23, 6, 2, 1],
+        borderWidth: 2
+      }]
+    };
+
+    // config 
+    const configPieChartQuatro = {
+      type: 'pie',
+      data: dataPieChartQuatro,
+     
+      options: {
+        borderWidth: 10,
+        borderRadius: 2,
+        hoverBorderWidth: 2,
+        aspectRatio: 1,
+
+      }
+    };
+
+    // render init block
+    const PieChartQuatro = new Chart(
+      document.getElementById('PieChartQuatro'),
+      configPieChartQuatro
+    );
+
+    // quinto chart--------------------------------------------------------------------------------------------------------------------------
+     // setup 
+     const dataPieChartCinco = {
+      labels: ['Sim, acredito', 'Não acredito'],
+      datasets: [{
+        label: 'Você acredita que a mídia impõe um padrão de beleza às pessoas',
+        data: [172, 11,],
+        borderWidth: 2
+      }]
+    };
+
+    // config 
+    const configPieChartCinco = {
+      type: 'pie',
+      data: dataPieChartCinco,
+     
+      options: {
+        borderWidth: 10,
+        borderRadius: 2,
+        hoverBorderWidth: 2,
+        aspectRatio: 1,
+
+      }
+    };
+
+    // render init block
+    const PieChartCinco = new Chart(
+      document.getElementById('PieChartCinco'),
+      configPieChartCinco
+    );
+   
+   // sexto chart--------------------------------------------------------------------------------------------------------------------------
+     // setup 
+     const dataPieChartSeis = {
+      labels: ['Gosto de acompanhar a moda', 'Sinto que pertenço à um grupo', 'Não me sinto bem com a minha beleza natural', 'Não me mantenho em padrões'],
+      datasets: [{
+        label: 'O que te mantém em algum padrão de beleza',
+        data: [65, 22, 23, 73],
+        borderWidth: 2
+      }]
+    };
+
+    // config 
+    const configPieChartSeis = {
+      type: 'pie',
+      data: dataPieChartSeis,
+     
+      options: {
+        borderWidth: 10,
+        borderRadius: 2,
+        hoverBorderWidth: 2,
+        aspectRatio: 1,
+
+      }
+    };
+
+    // render init block
+    const PieChartSeis = new Chart(
+      document.getElementById('PieChartSeis'),
+      configPieChartSeis
+    );
+   
+   // setimo chart--------------------------------------------------------------------------------------------------------------------------
+     // setup 
+     const dataPieChartSete = {
+      labels: ['Sim, gostaria', 'Não gostaria', 'Não consigo me desvincular', 'Não sigo nenhum padrão apresentado pela mídia'],
+      datasets: [{
+        label: 'Você gostaria de se desvincular dos padrões apresentados pela mídia',
+        data: [68, 32, 17, 1],
+        borderWidth: 2
+      }]
+    };
+
+    // config 
+    const configPieChartSete = {
+      type: 'pie',
+      data: dataPieChartSete,
+     
+      options: {
+        borderWidth: 10,
+        borderRadius: 2,
+        hoverBorderWidth: 2,
+        aspectRatio: 1,
+
+      }
+    };
+
+    // render init block
+    const PieChartSete = new Chart(
+      document.getElementById('PieChartSete'),
+      configPieChartSete
+    );
+
+    // oitavo chart--------------------------------------------------------------------------------------------------------------------------
+     // setup 
+     const dataPieChartOito = {
+      labels: ['Sim, anulam', 'Não anulam', 'Nunca percebi essa anulação'],
+      datasets: [{
+        label: 'Você Pensa que os padrões de beleza de alguma forma anulam a sua identidade te impedindo de ser como você realmente gostaria',
+        data: [72, 70, 41],
+        borderWidth: 2
+      }]
+    };
+
+    // config 
+    const configPieChartOito = {
+      type: 'pie',
+      data: dataPieChartOito,
+     
+      options: {
+        borderWidth: 10,
+        borderRadius: 2,
+        hoverBorderWidth: 2,
+        aspectRatio: 1,
+
+      }
+    };
+
+    // render init block
+    const PieChartOito = new Chart(
+      document.getElementById('PieChartOito'),
+      configPieChartOito
+    );
+   
+     // nono chart--------------------------------------------------------------------------------------------------------------------------
+     // setup 
+     const dataPieChartNove = {
+      labels: ['Racial', 'Religioso', 'Homofobia', 'Transfobia', 'Xenofobia', 'Machismo', 'Financeiro', 'Bullyng', 'Nunca sofri'],
+      datasets: [{
+        label: 'Qual tipo de preconceito você já sofreu',
+        data: [45, 37, 13, 2, 7, 22, 22, 4, 22],
+        borderWidth: 2
+      }]
+    };
+
+    // config 
+    const configPieChartNove = {
+      type: 'pie',
+      data: dataPieChartNove,
+     
+      options: {
+        borderWidth: 10,
+        borderRadius: 2,
+        hoverBorderWidth: 2,
+        aspectRatio: 1,
+
+      }
+    };
+
+    // render init block
+    const PieChartNove = new Chart(
+      document.getElementById('PieChartNove'),
+      configPieChartNove
+    );
+
+     // decimo chart--------------------------------------------------------------------------------------------------------------------------
+     // setup 
+     const dataPieChartDez = {
+      labels: ['Corpo Magro', 'Cor', 'Altura', 'Cabelo sem volume', 'Nenhum', 'Todos que machucam alguém'],
+      datasets: [{
+        label: 'Se pudesse qual padrão de beleza você eliminaria da sociedade',
+        data: [37, 53, 22, 16, 12],
+        borderWidth: 2
+      }]
+    };
+
+    // config 
+    const configPieChartDez = {
+      type: 'pie',
+      data: dataPieChartDez,
+     
+      options: {
+        borderWidth: 10,
+        borderRadius: 2,
+        hoverBorderWidth: 2,
+        aspectRatio: 1,
+
+      }
+    };
+
+    // render init block
+    const PieChartDez = new Chart(
+      document.getElementById('PieChartDez'),
+      configPieChartDez
+    );
+
+    
+   
+   
+   </script>
+
+  </body>
+</html>
