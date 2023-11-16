@@ -47,10 +47,7 @@
         <canvas id="PieChartSeis"></canvas>
       </div>
       
-      <div class="chartBox">
-        <div class="texto"> Você gostaria de se desvincular dos padrões apresentados pela mídia ? </div>
-        <canvas id="PieChartSete"></canvas>
-      </div>
+      
 
 
       <div class="chartBox">
@@ -58,15 +55,7 @@
         <canvas id="PieChartOito"></canvas>
       </div>
       
-      <div class="chartBox">
-        <div class="texto">Qual tipo de preconceito você já sofreu ?</div>
-        <canvas id="PieChartNove"></canvas>
-      </div>
-
-      <div class="chartBox">
-        <div class="texto">Qual tipo de preconceito você já sofreu ?</div>
-        <canvas id="PieChartDez"></canvas>
-      </div>
+      
         </div>
     </div>
 
@@ -152,37 +141,7 @@
       configLine
     );
 
-    //Terceiro chart--------------------------------------------------------------------------------------------------------------------
-     // setup 
-    const dataPie = {
-      labels: ['Heterossexual', 'Bissexual', 'Panssexual', 'Homossexual', 'Não-Binário'],
-      datasets: [{
-        label: 'Qual a sua orientação sexual',
-        data: [150, 21, 3, 6, 1],
-  
-        borderWidth: 2
-      }]
-    };
-
-    // config 
-    const configPie = {
-      type: 'pie',
-      data: dataPie,
-     
-      options: {
-        borderWidth: 10,
-        borderRadius: 2,
-        hoverBorderWidth: 0,
-        aspectRatio: 1,
-
-      }
-    };
-
-    // render init block
-    const PieChartTres = new Chart(
-      document.getElementById('PieChartTres'),
-      configPie
-    );
+    
    
     // quarto chart--------------------------------------------------------------------------------------------------------------------------
      // setup 
@@ -277,36 +236,7 @@
       configPieChartSeis
     );
    
-   // setimo chart--------------------------------------------------------------------------------------------------------------------------
-     // setup 
-     const dataPieChartSete = {
-      labels: ['Sim, gostaria', 'Não gostaria', 'Não consigo me desvincular', 'Não sigo nenhum padrão apresentado pela mídia'],
-      datasets: [{
-        label: 'Você gostaria de se desvincular dos padrões apresentados pela mídia',
-        data: [68, 32, 17, 1],
-        borderWidth: 2
-      }]
-    };
-
-    // config 
-    const configPieChartSete = {
-      type: 'pie',
-      data: dataPieChartSete,
-     
-      options: {
-        borderWidth: 10,
-        borderRadius: 2,
-        hoverBorderWidth: 2,
-        aspectRatio: 1,
-
-      }
-    };
-
-    // render init block
-    const PieChartSete = new Chart(
-      document.getElementById('PieChartSete'),
-      configPieChartSete
-    );
+   
 
     // oitavo chart--------------------------------------------------------------------------------------------------------------------------
      // setup 
@@ -339,69 +269,6 @@
       configPieChartOito
     );
    
-     // nono chart--------------------------------------------------------------------------------------------------------------------------
-     // setup 
-     const dataPieChartNove = {
-      labels: ['Racial', 'Religioso', 'Homofobia', 'Transfobia', 'Xenofobia', 'Machismo', 'Financeiro', 'Bullyng', 'Nunca sofri'],
-      datasets: [{
-        label: 'Qual tipo de preconceito você já sofreu',
-        data: [45, 37, 13, 2, 7, 22, 22, 4, 22],
-        borderWidth: 2
-      }]
-    };
-
-    // config 
-    const configPieChartNove = {
-      type: 'pie',
-      data: dataPieChartNove,
-     
-      options: {
-        borderWidth: 10,
-        borderRadius: 2,
-        hoverBorderWidth: 2,
-        aspectRatio: 1,
-
-      }
-    };
-
-    // render init block
-    const PieChartNove = new Chart(
-      document.getElementById('PieChartNove'),
-      configPieChartNove
-    );
-
-     // decimo chart--------------------------------------------------------------------------------------------------------------------------
-     // setup 
-     const dataPieChartDez = {
-      labels: ['Corpo Magro', 'Cor', 'Altura', 'Cabelo sem volume', 'Nenhum', 'Todos que machucam alguém'],
-      datasets: [{
-        label: 'Se pudesse qual padrão de beleza você eliminaria da sociedade',
-        data: [37, 53, 22, 16, 12],
-        borderWidth: 2
-      }]
-    };
-
-    // config 
-    const configPieChartDez = {
-      type: 'pie',
-      data: dataPieChartDez,
-     
-      options: {
-        borderWidth: 10,
-        borderRadius: 2,
-        hoverBorderWidth: 2,
-        aspectRatio: 1,
-
-      }
-    };
-
-    // render init block
-    const PieChartDez = new Chart(
-      document.getElementById('PieChartDez'),
-      configPieChartDez
-    );
-
-    
    
    
    </script>
