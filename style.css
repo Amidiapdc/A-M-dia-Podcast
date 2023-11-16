@@ -11,6 +11,26 @@ body {
 h1{
         color: #ffffff;
 }
+
+     .home{
+      border: 1px solid #ffffff;
+      padding: 7px 24px;
+      border-radius: 4px;
+      color:#ffffff;
+      background-color: transparent;
+      transition: background-color 0s;
+      position: absolute;
+      left: 90%;
+      top: 6.5%;
+
+  }
+  
+  .home:hover{
+      border: 1px solid #f44e3f;
+      background-color: #f44e3f;
+  
+  
+  }
       
       .chartMenu {
         width: 100vw;
