@@ -157,6 +157,25 @@ i{
 
 }
 
+.grafico{
+    border: 1px solid var(--cor-fonte);
+    padding: 7px 24px;
+    border-radius: 4px;
+    color: var(--cor-fonte);
+    background-color: transparent;
+    transition: background-color 0s;
+    position: absolute;
+    left: 86.5%;
+    top: 6.5%;
+}
+
+.grafico:hover{
+    border: 1px solid var(--cor-passada);
+    background-color: var(--cor-passada);
+
+
+}
+
 
 @media screen and (max-wdith: 768px){
     .button-contact:hover{
