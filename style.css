@@ -4,16 +4,12 @@
         font-family: sans-serif;
       }
 
-:root{
-   --cor-fonte: #ffffff;
-}
-
 body {
         background-color: #061421;
       }
 
 h1{
-        color:var(--cor-fundo);
+        color: #fff;
 }
       
       .chartMenu {
