@@ -720,11 +720,43 @@ h2{
 }
 
 .hehehehhehe{
+    width: 900px;
+    width: -webkit-fill-available;
+}
+
+.animation5{
+    display: table;
+    float: right;
     position: absolute;
-    left: 5%;
-    top: 395%;
+    margin: auto;
+    left: 65%;
+    top: 405%;
     max-width: 470px;
     opacity: 90%;
+    transform: rotateY(180deg);
+}
+
+.bonecos6{
+    width: 851px;
+    position:absolute;
+    left: 5%;
+    top: 410%;
+    transform: translate(-50% -50%);
+    text-align: justify;
+    text-indent: 40px;
+    font-size: 25px
+}
+
+.bonecos7{
+    width: 1223px;
+    position:absolute;
+    left: 5%;
+    top: 462%;
+    transform: translate(-50% -50%);
+    text-align: justify;
+    text-indent: 40px;
+    font-size: 25px
+
 }
 
 .h3{
