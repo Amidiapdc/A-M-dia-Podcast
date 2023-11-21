@@ -52,32 +52,17 @@ href="./logotipo-01.png">
     </div>
 
 
-   
-    
-
-
-
-  
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
-    <script>
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js"></script>
+      
+    <script type="text/javascript" src="https://unpkg.com/chart.js-plugin-labels-dv/dist/chartjs-plugin-labels.min.js"></script>
+      
+      
+    <script>
+
+      
   
     // setup - Primeiro Chart --------------------------------------------------------------------------------------------------------------
     const data = {
@@ -94,10 +79,15 @@ href="./logotipo-01.png">
       type: 'pie',
       data,
       options: {
-        aspectRatio: 1,
-            beginAtZero: true
+        plugins: {
+          labels: {
           }
-    };
+        }
+      
+           
+          }
+        }
+      
 
     // render init block
     const PieChartUm = new Chart(
@@ -121,8 +111,18 @@ href="./logotipo-01.png">
       type: 'pie',
       data: dataLine,
       options: { 
-        aspectRatio: 1,
-            beginAtZero: true
+        plugins: {
+          labels: {
+            precision: 0,
+            render: (args) => {
+              if(args.percentage >6){
+                return `${args.percentage}%`
+                
+              }
+            }
+            
+          }
+        }
           }
      
     };
@@ -152,12 +152,25 @@ href="./logotipo-01.png">
       data: dataPieChartQuatro,
      
       options: {
-        borderWidth: 10,
-        borderRadius: 2,
-        hoverBorderWidth: 2,
-        aspectRatio: 1,
+         plugins: {
+          labels: {
+            precision: 0,
+           
+            render: (args) => {
+              if(args.percentage >4){
+                return `${args.percentage}%`
+              }
+            },
 
-      }
+          
+            
+            
+          }
+        }
+          }
+
+          
+          
     };
 
     // render init block
@@ -183,10 +196,14 @@ href="./logotipo-01.png">
       data: dataPieChartCinco,
      
       options: {
-        borderWidth: 10,
-        borderRadius: 2,
-        hoverBorderWidth: 2,
-        aspectRatio: 1,
+       plugins: {
+          
+          labels: {
+           
+              
+          }
+        }
+        
 
       }
     };
@@ -214,10 +231,10 @@ href="./logotipo-01.png">
       data: dataPieChartSeis,
      
       options: {
-        borderWidth: 10,
-        borderRadius: 2,
-        hoverBorderWidth: 2,
-        aspectRatio: 1,
+       plugins: {
+          labels: {
+          }
+        }
 
       }
     };
@@ -247,10 +264,10 @@ href="./logotipo-01.png">
       data: dataPieChartOito,
      
       options: {
-        borderWidth: 10,
-        borderRadius: 2,
-        hoverBorderWidth: 2,
-        aspectRatio: 1,
+        plugins: {
+          labels: {
+          }
+        }
 
       }
     };
